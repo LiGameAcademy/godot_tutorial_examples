@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TestRes" load_steps=2 format=3 uid="uid://cdll6olnxjkbe"]
+
+[ext_resource type="Script" uid="uid://4hhj5q0mjseu" path="res://test_res.gd" id="1_lkmqv"]
+
+[resource]
+resource_local_to_scene = true
+script = ExtResource("1_lkmqv")
+metadata/_custom_type_script = "uid://4hhj5q0mjseu"
