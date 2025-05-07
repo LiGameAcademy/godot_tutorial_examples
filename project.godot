@@ -10,15 +10,26 @@ config_version=5
 
 [application]
 
-config/name="hello_world"
-run/main_scene="uid://d1s7jrq633a0t"
-config/features=PackedStringArray("4.4", "Mobile")
+config/name="Godot Tutorial Examples"
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+DataManager="*res://addons/GDDataForge/source/data_manager.gd"
 
 [display]
 
-window/stretch/mode="viewport"
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="canvas_items"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/GDDataForge/plugin.cfg")
 
 [rendering]
 
-renderer/rendering_method="mobile"
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_environment="res://default_env.tres"

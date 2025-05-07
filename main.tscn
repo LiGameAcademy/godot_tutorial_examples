@@ -1,35 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://d1s7jrq633a0t"]
+[gd_scene load_steps=2 format=3 uid="uid://dt05l67gt8o6g"]
 
-[ext_resource type="Script" uid="uid://i35n17avpvjv" path="res://test.gd" id="1_ig7tw"]
-[ext_resource type="Resource" uid="uid://cdll6olnxjkbe" path="res://test_res.tres" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://cslfl6vjcuvc3" path="res://main.gd" id="1_ig7tw"]
 
-[node name="Main" type="CanvasLayer"]
+[node name="Main" type="Node2D"]
 script = ExtResource("1_ig7tw")
-test_res = ExtResource("2_0xm2m")
-test_res_2 = ExtResource("2_0xm2m")
-
-[node name="ColorRect" type="ColorRect" parent="."]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0, 0, 0.2, 1)
-
-[node name="Label" type="Label" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -159.5
-offset_top = -33.5
-offset_right = 159.5
-offset_bottom = 33.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-theme_override_font_sizes/font_size = 48
-text = "Hello World！"
-horizontal_alignment = 1
-vertical_alignment = 1

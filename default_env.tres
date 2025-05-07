@@ -1,0 +1,10 @@
+[gd_resource type="Environment" load_steps=2 format=3 uid="uid://c6vqw4d6m3a7"]
+
+[sub_resource type="Sky" id="1"]
+
+[resource]
+background_mode = 2
+sky = SubResource("1")
+ambient_light_source = 3
+ambient_light_color = Color(0.67451, 0.760784, 0.917647, 1)
+tonemap_mode = 2
