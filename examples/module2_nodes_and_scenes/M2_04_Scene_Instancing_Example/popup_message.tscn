@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvk1h0uhigq5b"]
+
+[ext_resource type="Script" uid="uid://bpuko0yguu21w" path="res://examples/module2_nodes_and_scenes/M2_04_Scene_Instancing_Example/popup_message.gd" id="1_popupscript"]
+
+[node name="PopupMessage" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -30.0
+offset_right = 100.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_popupscript")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+text = "This is a popup message!"
+horizontal_alignment = 1
+vertical_alignment = 1
