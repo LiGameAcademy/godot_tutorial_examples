@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://c38nl8bu2cdg3"]
+
+[ext_resource type="Script" uid="uid://ds5eaj1be6kbn" path="res://examples/module2_nodes_and_scenes/M2_03_Scene_Tree_Example/scene_tree_demo.gd" id="1_main"]
+
+[node name="scene_tree_demo" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="ControlPanel" type="HBoxContainer" parent="."]
+offset_right = 700.0
+offset_bottom = 180.0
+
+[node name="ActionsVBox" type="VBoxContainer" parent="ControlPanel"]
+layout_mode = 2
+alignment = 1
+
+[node name="InstantiateButton" type="Button" parent="ControlPanel/ActionsVBox"]
+layout_mode = 2
+text = "Instantiate SimpleInstance"
+
+[node name="RemoveInstanceButton" type="Button" parent="ControlPanel/ActionsVBox"]
+layout_mode = 2
+text = "Remove Last Instance"
+
+[node name="CallGroupButton" type="Button" parent="ControlPanel/ActionsVBox"]
+layout_mode = 2
+text = "Call 'flash' on Group"
+
+[node name="PauseButton" type="Button" parent="ControlPanel/ActionsVBox"]
+layout_mode = 2
+text = "Pause Tree"
+
+[node name="ResumeButton" type="Button" parent="ControlPanel/ActionsVBox"]
+process_mode = 3
+layout_mode = 2
+text = "Resume Tree"
+
+[node name="LogDisplayLabel" type="Label" parent="ControlPanel"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Scene Tree Demo Actions.
+Check console for detailed logs.
+Instantiated scenes will appear below."
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="InstanceContainer" type="VBoxContainer" parent="."]
+offset_left = 20.0
+offset_top = 200.0
+offset_right = 700.0
+offset_bottom = 600.0
