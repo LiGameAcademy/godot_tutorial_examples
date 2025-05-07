@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://bl1ekmcuh0d5t"]
+
+[ext_resource type="Script" uid="uid://c6hgkppkqmgfr" path="res://examples/module2_nodes_and_scenes/M2_06_Groups_Example/group_manager.gd" id="1_manager_script"]
+[ext_resource type="PackedScene" uid="uid://dplxkqrw0bnvb" path="res://examples/module2_nodes_and_scenes/M2_06_Groups_Example/group_member.tscn" id="2_member_scene"]
+
+[node name="GroupsDemoMain" type="CanvasLayer"]
+script = ExtResource("1_manager_script")
+
+[node name="ControlPanel" type="PanelContainer" parent="."]
+offset_right = 280.0
+offset_bottom = 350.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlPanel"]
+layout_mode = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Label" type="Label" parent="ControlPanel/VBoxContainer"]
+layout_mode = 2
+text = "分组操作控制板"
+horizontal_alignment = 1
+
+[node name="AddToDynamicAButton" type="Button" parent="ControlPanel/VBoxContainer"]
+layout_mode = 2
+text = "添加成员到动态分组A"
+
+[node name="IdentifyDynamicAButton" type="Button" parent="ControlPanel/VBoxContainer"]
+layout_mode = 2
+text = "识别动态分组A成员"
+
+[node name="FlashDynamicAButton" type="Button" parent="ControlPanel/VBoxContainer"]
+layout_mode = 2
+text = "闪烁动态分组A成员 (红色)"
+
+[node name="IdentifyStaticBButton" type="Button" parent="ControlPanel/VBoxContainer"]
+layout_mode = 2
+text = "识别静态分组B成员"
+
+[node name="RemoveFromGroupButton" type="Button" parent="ControlPanel/VBoxContainer"]
+layout_mode = 2
+text = "从动态分组A移除首个成员"
+
+[node name="ClearDynamicAButton" type="Button" parent="ControlPanel/VBoxContainer"]
+layout_mode = 2
+text = "清空动态分组A (删除节点)"
+
+[node name="StatusLabel" type="Label" parent="ControlPanel/VBoxContainer"]
+layout_mode = 2
+text = "状态信息将显示在这里"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="MembersContainer" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="StaticMemberInEditor" parent="MembersContainer" groups=["static_type_b"] instance=ExtResource("2_member_scene")]
+position = Vector2(367, 55)
+
+[connection signal="pressed" from="ControlPanel/VBoxContainer/AddToDynamicAButton" to="." method="_on_add_to_dynamic_a_button_pressed"]
+[connection signal="pressed" from="ControlPanel/VBoxContainer/IdentifyDynamicAButton" to="." method="_on_identify_dynamic_a_button_pressed"]
+[connection signal="pressed" from="ControlPanel/VBoxContainer/FlashDynamicAButton" to="." method="_on_flash_dynamic_a_button_pressed"]
+[connection signal="pressed" from="ControlPanel/VBoxContainer/IdentifyStaticBButton" to="." method="_on_identify_static_b_button_pressed"]
+[connection signal="pressed" from="ControlPanel/VBoxContainer/RemoveFromGroupButton" to="." method="_on_remove_from_group_button_pressed"]
+[connection signal="pressed" from="ControlPanel/VBoxContainer/ClearDynamicAButton" to="." method="_on_clear_dynamic_a_button_pressed"]
