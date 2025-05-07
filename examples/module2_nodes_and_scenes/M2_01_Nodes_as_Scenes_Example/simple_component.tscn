@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1a2b3c4d5e6"]
+
+[ext_resource type="Script" path="res://examples/module2_nodes_and_scenes/M2_01_Nodes_as_Scenes_Example/simple_component.gd" id="1_abcde"]
+[ext_resource type="Texture2D" uid="uid://cgh77a6xau2ok" path="res://icon.svg" id="2_fghij"]
+
+[node name="SimpleComponent" type="Node2D"]
+script = ExtResource("1_abcde")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fghij")
